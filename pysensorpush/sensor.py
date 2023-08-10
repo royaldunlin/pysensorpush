@@ -52,6 +52,11 @@ class SPSensor:
         """Returns humididy from latest sample."""
         return None
 
+    @property
+    def barometric_pressure(self):
+        """Returns barometric pressure from latest sample."""
+        return None
+
     def update(self):
         """Update object properties."""
         self._attrs = self._session.refresh_attributes(self.name)
